@@ -1,0 +1,15 @@
+Z:\programacion4\TP02_CensoNacional\TP02_CensoNacional\bin\Debug\net7.0\TP02_CensoNacional.exe
+Z:\programacion4\TP02_CensoNacional\TP02_CensoNacional\bin\Debug\net7.0\TP02_CensoNacional.deps.json
+Z:\programacion4\TP02_CensoNacional\TP02_CensoNacional\bin\Debug\net7.0\TP02_CensoNacional.runtimeconfig.json
+Z:\programacion4\TP02_CensoNacional\TP02_CensoNacional\bin\Debug\net7.0\TP02_CensoNacional.dll
+Z:\programacion4\TP02_CensoNacional\TP02_CensoNacional\bin\Debug\net7.0\TP02_CensoNacional.pdb
+Z:\programacion4\TP02_CensoNacional\TP02_CensoNacional\obj\Debug\net7.0\TP02_CensoNacional.csproj.AssemblyReference.cache
+Z:\programacion4\TP02_CensoNacional\TP02_CensoNacional\obj\Debug\net7.0\TP02_CensoNacional.GeneratedMSBuildEditorConfig.editorconfig
+Z:\programacion4\TP02_CensoNacional\TP02_CensoNacional\obj\Debug\net7.0\TP02_CensoNacional.AssemblyInfoInputs.cache
+Z:\programacion4\TP02_CensoNacional\TP02_CensoNacional\obj\Debug\net7.0\TP02_CensoNacional.AssemblyInfo.cs
+Z:\programacion4\TP02_CensoNacional\TP02_CensoNacional\obj\Debug\net7.0\TP02_CensoNacional.csproj.CoreCompileInputs.cache
+Z:\programacion4\TP02_CensoNacional\TP02_CensoNacional\obj\Debug\net7.0\TP02_CensoNacional.dll
+Z:\programacion4\TP02_CensoNacional\TP02_CensoNacional\obj\Debug\net7.0\refint\TP02_CensoNacional.dll
+Z:\programacion4\TP02_CensoNacional\TP02_CensoNacional\obj\Debug\net7.0\TP02_CensoNacional.pdb
+Z:\programacion4\TP02_CensoNacional\TP02_CensoNacional\obj\Debug\net7.0\TP02_CensoNacional.genruntimeconfig.cache
+Z:\programacion4\TP02_CensoNacional\TP02_CensoNacional\obj\Debug\net7.0\ref\TP02_CensoNacional.dll
