@@ -13,10 +13,19 @@ class Persona{
         Email = email;
     }
 
-    // public bool PuedeVotar(){
-    //     if(FechaNacimiento.Year >= DateTime.Today.Year){
+    public bool PuedeVotar(){
+        bool verdadero = false;
+        int edad = ObtenerEdad();
+        if(edad >= 16){
+            verdadero = true;
+        }
+        Console.WriteLine("Edad del individuo: " + edad);
+        return verdadero;
+    }
 
-    //     }
-    // }
+    public int ObtenerEdad(){
+        int edadPersona = DateTime.Today.Year - FechaNacimiento.Year;
+        return edadPersona;
+    }
 
 }

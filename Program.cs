@@ -6,17 +6,28 @@ class Program
         int dni = 0;
         string apellido = "";
         string nombre = "";
+        int numMenu = 0;
         DateTime fechaNacimiento = new DateTime();
         string email = "";
-        int numMenu = IngresarInt("Ingrese un numero para seleccionar una opción. 1. Cargar nueva persona. 2. Obtener características del censo. 3. Buscar persona. 4. Modificar mail de una persona. 5. Salir");
+        List<Persona> listaPersonas = new List<Persona>();
+        do{
+        numMenu = IngresarInt("Ingrese un numero para seleccionar una opción. 1. Cargar nueva persona. 2. Obtener características del censo. 3. Buscar persona. 4. Modificar mail de una persona. 5. Salir");
         switch(numMenu){
             case 1: 
+            Persona p = new Persona();
             dni = IngresarInt("Ingrese el dni de la persona: ");
             apellido = IngresarString("Ingrese el apellido: ");
             nombre = IngresarString("Ingrese el nombre: ");
             fechaNacimiento = IngresarDateTime("Ingrese su fecha de nacimiento de la siguiente forma: x/xx/xx");
+            email = IngresarString("Ingrese su Email: ");
             Console.WriteLine(fechaNacimiento);
-            Persona p = new Persona();
+            p.PersonaMetodo(dni,apellido,nombre,fechaNacimiento, email);
+            p.ObtenerEdad();
+            p.PuedeVotar();
+            listaPersonas.Add(p);
+            foreach(Persona y in listaPersonas){
+                Console.WriteLine(y);
+            }
             break;
 
             case 2: 
@@ -31,9 +42,8 @@ class Program
             case 5: 
             break;
         }
-            
+            }while(numMenu != 5);
     }
-    static List<Persona> listaPersonas = new List<Persona>();
 
 
     static int IngresarInt(string mensaje){
