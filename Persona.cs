@@ -4,22 +4,21 @@ class Persona{
     public string Nombre {get; set;}
     public DateTime FechaNacimiento {get; set;}
     public string Email {get; set;}
-
-    public void PersonaMetodo(int dni, string apellido, string nombre, DateTime fechaNacimiento, string email){
+    
+    public Persona(int dni, string apellido, string nombre, DateTime fechaNacimiento, string email){
         DNI = dni;
         Apellido = apellido;
         Nombre = nombre;
         FechaNacimiento = fechaNacimiento;
         Email = email;
     }
-
+    
     public bool PuedeVotar(){
         bool verdadero = false;
         int edad = ObtenerEdad();
         if(edad >= 16){
             verdadero = true;
         }
-        Console.WriteLine("Edad del individuo: " + edad);
         return verdadero;
     }
 
