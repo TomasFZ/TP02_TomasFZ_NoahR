@@ -11,28 +11,35 @@ class Program
         DateTime fechaNacimiento = new DateTime();
         string email = "";
         List<Persona> listaPersonas = new List<Persona>();
+        List<int> listaDNI = new List<int>();
         int iterador = 0;
         do{
         numMenu = IngresarInt("Ingrese un numero para seleccionar una opción. 1. Cargar nueva persona. 2. Obtener características del censo. 3. Buscar persona. 4. Modificar mail de una persona. 5. Salir");
         switch(numMenu){
-            case 1: 
+            case 1:
             iterador++;
             dni = IngresarInt("Ingrese el dni de la persona: "); //verificar que no haya doble dni y que los datos sean correctos. 
+            foreach(int numV in listaDNI){
+                int i = 0;
+                while(dni == listaDNI[i]){
+                    dni = IngresarInt("Ingrese un dni no IMPOSIBLE: ");
+                }
+                i++;
+            } 
+            listaDNI.Add(dni);
             apellido = IngresarString("Ingrese el apellido: ");
             nombre = IngresarString("Ingrese el nombre: ");
             fechaNacimiento = IngresarDateTime("Ingrese su fecha de nacimiento de la siguiente forma: x/xx/xx");
             email = IngresarString("Ingrese su Email: ");
             Persona p = new Persona(dni,apellido,nombre,fechaNacimiento, email);
-            Console.WriteLine(fechaNacimiento);
             listaPersonas.Add(p);
             Console.WriteLine($"Se ha creado a la persona {p.Apellido} {p.Nombre} y se ha agregado a la lista.");
-
             // foreach(Persona y in listaPersonas){ //despues se saca. 
             //     Console.WriteLine(y.Nombre);
             // }
             break;
 
-            case 2: 
+            case 2: // Dice todas las estadisticas de las personas ingresadas.
             if(iterador == 0){
                 Console.WriteLine("Aún no se ingresaron personas en la lista.");
             }else{
@@ -59,24 +66,26 @@ class Program
             }
             break;
 
-            case 3: 
+            case 3: // Busca a una persona mediante su DNI.
+            bool encontrado = false;
             int edad = 0;
             dniBuscar = IngresarInt("Ingrese el DNI de la persona a buscar: ");
             foreach(Persona t in listaPersonas){
                 if(dniBuscar == t.DNI){
+                    encontrado = true;
                     edad = t.ObtenerEdad();
                     Console.WriteLine("NOMBRE: " + t.Nombre);
                     Console.WriteLine("APELLIDO: " + t.Apellido);
                     Console.WriteLine("EDAD: " + edad);
                     Console.WriteLine("EMAIL: " + t.Email);
                     //Console.WriteLine("PUEDE VOTAR: " + t.PuedeVotar());
-                }else{
+                }
+            }if(encontrado == false){
                     Console.WriteLine("No se encuentra el DNI. ");
                 }
-            }
             break;
 
-            case 4: 
+            case 4: // Cambia Email.
             string newMail = "";
             dniBuscar = IngresarInt("Ingrese el DNI de la persona a buscar: ");
             foreach(Persona r in listaPersonas){
@@ -89,10 +98,10 @@ class Program
             }
             break;
             
-            case 5: 
+            case 5: // Sale del programa.
             break;
         }
-            }while(numMenu != 5);
+        }while(numMenu != 5);
     }
 
     static int IngresarInt(string mensaje){
