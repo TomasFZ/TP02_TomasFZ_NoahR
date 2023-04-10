@@ -55,7 +55,7 @@ class Program
                 if(siono == true){                                // pasarlo a funcion.
                     numVotar++;
                 }
-            }
+            } 
             Console.WriteLine($"Cantidad de personas habilitadas para votar: {numVotar}");
             foreach(Persona b in listaPersonas){
                 num1 += b.ObtenerEdad();              //PASARLO ESTO JUNTO A PUEDEVOTAR EN UNA FUNCION... 
@@ -78,7 +78,7 @@ class Program
                     Console.WriteLine("APELLIDO: " + t.Apellido);
                     Console.WriteLine("EDAD: " + edad);
                     Console.WriteLine("EMAIL: " + t.Email);
-                    //Console.WriteLine("PUEDE VOTAR: " + t.PuedeVotar());
+                    Console.WriteLine("PUEDE VOTAR: " + t.PuedeVotar());
                 }
             }if(encontrado == false){
                     Console.WriteLine("No se encuentra el DNI. ");
